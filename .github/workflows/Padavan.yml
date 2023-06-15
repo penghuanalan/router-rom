@@ -144,12 +144,12 @@ jobs:
         ls -l
         
         
-    - name : 上传编译的固件Artifacts
-      uses: actions/upload-artifact@v2
-      if: true
-      with:
-        name: ${{ env.NAME }}
-        path: /opt/images
+ #   - name : 上传编译的固件Artifacts
+  #    uses: actions/upload-artifact@v2
+  #    if: true
+   #   with:
+#        name: ${{ env.NAME }}
+  #      path: /opt/images
         
     - name: 发布到Release
       if: ${{ github.event.inputs.release == 'yes' }}
